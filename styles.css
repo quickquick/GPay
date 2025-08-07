@@ -1,0 +1,57 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#first-grid-container {
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+
+.first-flex-box {
+    /* align-content: center; */
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100vh; */
+    row-gap: 5px;
+    /* width: 50%; */
+}
+
+.item {
+    /* border: 2px solid green; */
+    align-self: center;
+}
+
+.input-field p {
+    text-align: right;
+}
+
+.input-field form input {
+    border: 1px solid blue;
+    border-radius: 0.6em;
+    padding: 15px;
+    width: 300px;
+}
+
+.login button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 1.2em;
+    padding: 15px;
+    width: 250px;
+    /* height: 30px; */
+}
+
+.numpad div button {
+    border: none;
+    border-radius: 0.5em;
+    width: 80px;
+    padding: 20px;
+    margin: 2px;
+}
