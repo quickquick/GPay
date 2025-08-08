@@ -30,8 +30,8 @@ function enterNumber() {
     var inputFieldLength = inputField.value.length;
 
     // document.querySelector(".username p").innerHTML = inputFieldLength;
-    if ( (inputFieldLength+1) <= 7) {
-        
+    if ( inputFieldLength < 6) {
+  
         switch(keyPressedInnerHTML){
             case "1":
                 var crash = new Audio("sounds/crash.mp3");
@@ -116,7 +116,7 @@ function enterNumber() {
                 inputField.value = inputField.value;
                 document.images[0].setAttribute("src", "./assets/images/George_skyblue.png");
         }
-        // inputField.value += keyPressedInnerHTML; 
+
         if (inputFieldLength === 5) {
             document.querySelector(".login button").style.backgroundColor = "#00B875";
         } else if (inputFieldLength <= 5) {
@@ -126,9 +126,18 @@ function enterNumber() {
             inputField.style.color = "red";
             document.querySelector(".login button").style.backgroundColor = "#B4E9D593";
         } 
-    } else {
-        inputField.value = "";
-        inputField.style.color = "black";
+    } else if (inputFieldLength >= 6) {
+        switch (keyPressedInnerHTML) {
+            case "del":
+                del();
+                var commot = new Audio("sounds/commot.m4a");
+                commot.play(); 
+                break;
+
+            default:
+                inputField.value = "";
+                inputField.style.color = "black";
+        }
     }
 }
 numKeyPressed = document.querySelectorAll(".numKey");
