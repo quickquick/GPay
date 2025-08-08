@@ -14,7 +14,12 @@ function del() {
     }
 
     for (var i = 0; i < lenArr-1; i++) {
-        afterDeletion += arr[i];
+        if (i === 0) {
+            afterDeletion = arr[i];
+        } else {
+            afterDeletion += arr[i];
+        }
+        
     }
     inputField.style.color = "red";
     document.querySelector("input").value = afterDeletion;
