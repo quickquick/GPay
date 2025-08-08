@@ -95,8 +95,14 @@ function enterNumber() {
                 inputField.value = inputField.value;
         }
         // inputField.value += keyPressedInnerHTML; 
+        if (inputFieldLength === 5) {
+            document.querySelector(".login button").style.backgroundColor = "#00B875";
+        } else if (inputFieldLength <= 5) {
+            document.querySelector(".login button").style.backgroundColor = "#B4E9D593";
+        }
         if (inputFieldLength === 6) {
             inputField.style.color = "red";
+            document.querySelector(".login button").style.backgroundColor = "#0000FF50";
         } 
     } else {
         inputField.value = "";

@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 #first-grid-container {
@@ -37,14 +37,17 @@ body {
 }
 
 .input-field form input {
-    border: 1px solid blue;
+    /* border: none; */
+    background-color: #F8F8FA;
+    border: 1px solid #00B875;
     border-radius: 0.6em;
     padding: 15px;
     width: 300px;
 }
 
 .login button {
-    background-color: blue;
+    /* background-color: #0000FF50; */
+    background-color: #B4E9D593;
     color: white;
     border: none;
     border-radius: 1.2em;
@@ -53,7 +56,13 @@ body {
     /* height: 30px; */
 }
 
+.numpad {
+    /* border: 2px solid blue; */
+    background-color: #F8F8FA;
+}
+
 .numpad div button {
+    background-color: white;
     border: none;
     border-radius: 0.5em;
     width: 80px;
