@@ -26,6 +26,8 @@ function enterNumber() {
         
         switch(keyPressedInnerHTML){
             case "1":
+                var crash = new Audio("sounds/crash.mp3");
+                crash.play();
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
                 break;
