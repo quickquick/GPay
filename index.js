@@ -80,10 +80,14 @@ function enterNumber() {
                 inputField.value += keyPressedInnerHTML;
                 break;
             case "0":
+                var kick = new Audio("sounds/kick-bass.mp3");
+                kick.play(); 
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
                 break;
             case "del":
+                var commot = new Audio("sounds/commot.m4a");
+                commot.play(); 
                 del();
                 break;
             
