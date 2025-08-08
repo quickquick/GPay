@@ -19,13 +19,17 @@ body {
     flex-direction: column;
     justify-content: center;
     /* height: 100vh; */
-    row-gap: 5px;
+    row-gap: 2px;
     /* width: 50%; */
 }
 
 .item {
     /* border: 2px solid green; */
     align-self: center;
+}
+
+.pfp img {
+    border-radius: 50%;
 }
 
 .input-field p {
