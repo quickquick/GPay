@@ -2,11 +2,13 @@ var firstSection = document.querySelectorAll("#first-grid-container")[0].querySe
 var inputField = document.querySelector(".input-field form input");
 var inputFieldLength = inputField.value.length;
 
+var imageArray = ["./assets/images/George.jpg", "./assets/images/geo.jpg", "./assets/images/chindo1_ghibli.jpg"]
+
 
 function del() {
     var arr = [];
     var lenArr = document.querySelector("input").value.length;
-    var afterDeletion = "";
+    var afterDeletion = '';
     for (var i = 0; i < lenArr; i++) {
         arr.push(document.querySelector("input").value[i]);
     }
@@ -22,7 +24,8 @@ function enterNumber() {
     var keyPressedInnerHTML = this.innerText;
     var inputFieldLength = inputField.value.length;
 
-    if (inputFieldLength <= 6) {
+    // document.querySelector(".username p").innerHTML = inputFieldLength;
+    if ( (inputFieldLength+1) <= 7) {
         
         switch(keyPressedInnerHTML){
             case "1":
@@ -30,18 +33,22 @@ function enterNumber() {
                 crash.play();
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
+                document.images[0].setAttribute("src", imageArray[parseInt(keyPressedInnerHTML)-1]);
                 break;
             case "2":
                 var kick = new Audio("sounds/kick-bass.mp3");
                 kick.play();
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML; 
+                document.images[0].setAttribute("src", imageArray[parseInt(keyPressedInnerHTML)-1]);
                 break;
             case "3":
                 var snare = new Audio("sounds/snare.mp3");
                 snare.play();
                 inputField.style.color = "black";
-                inputField.value += keyPressedInnerHTML; 
+                inputField.value += keyPressedInnerHTML;
+                document.images[0].setAttribute("src", imageArray[parseInt(keyPressedInnerHTML)-1]);
+                document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>Chindo";
                 break;
             case "4":
                 var tom1 = new Audio("sounds/tom-1.mp3");
@@ -86,13 +93,14 @@ function enterNumber() {
                 inputField.value += keyPressedInnerHTML;
                 break;
             case "del":
+                del();
                 var commot = new Audio("sounds/commot.m4a");
                 commot.play(); 
-                del();
                 break;
             
             default:
                 inputField.value = inputField.value;
+                document.images[0].setAttribute("src", "./assets/images/George_skyblue.png");
         }
         // inputField.value += keyPressedInnerHTML; 
         if (inputFieldLength === 5) {
