@@ -102,7 +102,7 @@ function enterNumber() {
         }
         if (inputFieldLength === 6) {
             inputField.style.color = "red";
-            document.querySelector(".login button").style.backgroundColor = "#0000FF50";
+            document.querySelector(".login button").style.backgroundColor = "#B4E9D593";
         } 
     } else {
         inputField.value = "";
@@ -128,7 +128,7 @@ function changeColor() {
 }
 
 function changeColorReverse() {
-    this.style.backgroundColor = "#F0F0F0";
+    this.style.backgroundColor = "#FFFFFF";
 }
 
 for (var i = 0; i < document.querySelectorAll(".numKey").length; i++) {
