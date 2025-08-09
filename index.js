@@ -9,6 +9,7 @@ function del() {
     var arr = [];
     var lenArr = document.querySelector("input").value.length;
     var afterDeletion = '';
+    // inputFieldLength = inputField.value.length - 1;
     for (var i = 0; i < lenArr; i++) {
         arr.push(document.querySelector("input").value[i]);
     }
@@ -23,15 +24,21 @@ function del() {
     }
     inputField.style.color = "red";
     document.querySelector("input").value = afterDeletion;
+    // document.querySelector(".username p").innerHTML = afterDeletion;
+    document.querySelector(".login button").style.backgroundColor = "#B4E9D593";
 }
 
 function enterNumber() {
     var keyPressedInnerHTML = this.innerText;
-    var inputFieldLength = inputField.value.length;
+    var inputFieldLength = inputField.value.length + 1;
 
     // document.querySelector(".username p").innerHTML = inputFieldLength;
-    if ( inputFieldLength < 6) {
-  
+    if ( inputFieldLength <= 6) {
+
+        if (inputFieldLength === 6) {
+            document.querySelector(".login button").style.backgroundColor = "#00B875";
+        }
+
         switch(keyPressedInnerHTML){
             case "1":
                 var crash = new Audio("sounds/crash.mp3");
@@ -39,7 +46,7 @@ function enterNumber() {
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
                 document.images[0].setAttribute("src", imageArray[parseInt(keyPressedInnerHTML)-1]);
-                document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
+                // document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
                 break;
             case "2":
                 var kick = new Audio("sounds/kick-bass.mp3");
@@ -47,7 +54,7 @@ function enterNumber() {
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML; 
                 document.images[0].setAttribute("src", imageArray[parseInt(keyPressedInnerHTML)-1]);
-                document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
+                // document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
                 break;
             case "3":
                 var snare = new Audio("sounds/snare.mp3");
@@ -55,59 +62,60 @@ function enterNumber() {
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
                 document.images[0].setAttribute("src", imageArray[parseInt(keyPressedInnerHTML)-1]);
-                document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>Chindo";
+                // document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>Chindo";
                 break;
             case "4":
                 var tom1 = new Audio("sounds/tom-1.mp3");
                 tom1.play();
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
-                 document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
+                //  document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
                 break;
             case "5":
                 var tom2 = new Audio("sounds/tom-2.mp3");
                 tom2.play();
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
-                document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
+                // document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
                 break;
             case "6":
                 var tom3 = new Audio("sounds/tom-3.mp3");
                 tom3.play();
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
-                document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
+                // document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
                 break;
             case "7":
                 var tom4 = new Audio("sounds/tom-4.mp3");
                 tom4.play();
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
-                document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
+                // document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
                 break;
             case "8":
                 var chai = new Audio("sounds/chai.mp3");
                 chai.play();
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
-                document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
+                // document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
                 break;
             case "9":
                 var ewo = new Audio("sounds/ewo.m4a");
                 ewo.play();        
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
-                document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
+                // document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
                 break;
             case "0":
                 var kick = new Audio("sounds/kick-bass.mp3");
                 kick.play(); 
                 inputField.style.color = "black";
                 inputField.value += keyPressedInnerHTML;
-                document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
+                // document.querySelector(".username p").innerHTML = "<span style='color: blue;'>@</span>george0x";
                 break;
             case "del":
                 del();
+                // inputFieldLength = inputField.value.length - 1;
                 var commot = new Audio("sounds/commot.m4a");
                 commot.play(); 
                 break;
@@ -117,15 +125,11 @@ function enterNumber() {
                 document.images[0].setAttribute("src", "./assets/images/George_skyblue.png");
         }
 
-        if (inputFieldLength === 5) {
-            document.querySelector(".login button").style.backgroundColor = "#00B875";
-        } else if (inputFieldLength <= 5) {
-            document.querySelector(".login button").style.backgroundColor = "#B4E9D593";
-        }
-        if (inputFieldLength === 6) {
+        if (inputFieldLength === 7) {
             inputField.style.color = "red";
             document.querySelector(".login button").style.backgroundColor = "#B4E9D593";
-        } 
+        }
+
     } else if (inputFieldLength >= 6) {
         switch (keyPressedInnerHTML) {
             case "del":
