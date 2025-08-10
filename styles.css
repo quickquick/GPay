@@ -69,3 +69,8 @@ body {
     padding: 20px;
     margin: 2px;
 }
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #00B875;
+  opacity: 0.5;
+}
