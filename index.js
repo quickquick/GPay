@@ -147,18 +147,51 @@ function enterNumber(buttonClicked) {
 numKeyPressed = document.querySelectorAll(".numKey");
 
 function butnAnimation(n) {
-    n = parseInt(n);
-    document.querySelectorAll(".numKey")[n-1].classList.add("pressed");
+    // n = parseInt(n);
+    console.log(n);
+    switch(n.toString()) {
+        case "0":
+            document.querySelector(".zero").classList.add("pressed");
+            break;
+        case "del":
+            document.querySelector(".del").classList.add("pressed");
+            break;
+        case "&nbsp;":
+            document.querySelector(".blank").classList.add("pressed");
+            break;
+        
+        default:
+            n = parseInt(n);
+    } 
+    if (n >= 1 && n <= 9) {
+        document.querySelectorAll(".numKey")[n-1].classList.add("pressed");
+    }
+
     setTimeout(function() {
-        document.querySelectorAll(".numKey")[n-1].classList.remove("pressed");
+        if (typeof(n) === "number") {
+            document.querySelectorAll(".numKey")[n-1].classList.remove("pressed");
+        } else {
+            console.log(typeof(n))
+            switch(n) {
+                case "0":
+                    document.querySelector(".zero").classList.remove("pressed");
+                    break;
+                case "del":
+                    document.querySelector(".del").classList.remove("pressed");
+                    break;
+                case "&nbsp;":
+                    document.querySelector(".blank").classList.remove("pressed");
+                    break;
+            }
+        }
     }, 100);
 }
 
 for (var i = 0; i < document.querySelectorAll(".numKey").length; i++) {
     numKeyPressed[i].addEventListener("click", function() {
-        var buttonClicked = this.textContent;
+        var buttonClicked = this.innerHTML;
         // buttonClicked = parseInt(buttonClicked);
-        console.log(typeof(buttonClicked));
+        // console.log(typeof(typeof(buttonClicked)));
         enterNumber(buttonClicked);
         butnAnimation(buttonClicked);
     });
@@ -180,6 +213,11 @@ function changeColorReverse() {
     this.style.backgroundColor = "#FFFFFF";
 }
 
+function displayKeyPad() {
+    document.querySelector(".numpad").classList.remove("show");
+}
+
+inputField.addEventListener("click", displayKeyPad)
 // for (var i = 0; i < document.querySelectorAll(".numKey").length; i++) {
 //     numKeyPressed[i].addEventListener("mouseover", changeColor);
 //     numKeyPressed[i].addEventListener("mouseout", changeColorReverse);
