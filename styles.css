@@ -9,7 +9,7 @@ body {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-    height: 100vh;
+    height: 80vh;
 }
 
 .first-flex-box {
@@ -32,6 +32,10 @@ body {
     border-radius: 50%;
 }
 
+.username {
+    margin-top: -25px;
+}
+
 .input-field p {
     text-align: right;
 }
@@ -43,6 +47,10 @@ body {
     border-radius: 0.6em;
     padding: 15px;
     width: 300px;
+}
+
+.login {
+    padding-bottom: 20px;
 }
 
 .login button {
@@ -58,6 +66,7 @@ body {
 
 .numpad {
     background-color: #F8F8FA;
+    border-radius: 0.5em;
 }
 
 .numpad div button {
@@ -78,14 +87,13 @@ body {
     display: none;
 }
 
-@media (max-width: 680px) {
+/* @media (max-width: 680px) {
     body {
         background-color: black;
-    }
+    } */
 
-    #first-grid-container {
+    /* #first-grid-container {
         border: 2px solid red;
-        /* padding-bottom: 500px; */
         gap: 0px;
         height: 80vh;
     }
@@ -101,5 +109,5 @@ body {
 
     .username {
         color: white;
-    }
-}
+    } */
+/* } */
