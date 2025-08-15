@@ -4,6 +4,48 @@ body {
     /* background-color: orange; */
 }
 
+#landing-page {
+    /* border: 2px solid red; */
+    background-color: #00B875;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#landing-page .intro h1 {
+    
+    color: white;
+}
+
+.hide {
+    display: none !important;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+a:any-link {
+    color: white;
+}
+
+a:focus {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
 #first-grid-container {
     /* border: 2px solid red; */
     display: grid;
@@ -22,6 +64,7 @@ body {
     row-gap: 2px;
     /* width: 50%; */
 }
+
 
 .item {
     /* border: 2px solid green; */
@@ -83,9 +126,11 @@ body {
   opacity: 0.5;
 }
 
-.hide-keypad {
+/* .hide-keypad {
     display: none;
-}
+} */
+
+
 
 /* @media (max-width: 680px) {
     body {
